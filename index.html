@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jiaqian Li</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #222222;
+      --muted: #666666;
+      --link: #1772d0;
+      --line: #dddddd;
+      --light: #f7f7f7;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.55;
+      font-size: 16px;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 28px 24px 60px;
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 34px;
+      padding-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .site-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 15px;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 260px minmax(0, 1fr);
+      gap: 42px;
+      align-items: start;
+    }
+
+    aside {
+      position: sticky;
+      top: 24px;
+    }
+
+    .profile-photo {
+      width: 220px;
+      height: 220px;
+      border-radius: 6px;
+      object-fit: cover;
+      background: var(--light);
+      border: 1px solid var(--line);
+      display: block;
+      margin-bottom: 18px;
+    }
+
+    .photo-placeholder {
+      width: 220px;
+      height: 220px;
+      border-radius: 6px;
+      background: var(--light);
+      border: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      text-align: center;
+      padding: 18px;
+      margin-bottom: 18px;
+      font-size: 14px;
+    }
+
+    .name {
+      font-size: 26px;
+      font-weight: 700;
+      margin: 0 0 6px;
+    }
+
+    .role {
+      color: var(--muted);
+      margin: 0 0 14px;
+      font-size: 15px;
+    }
+
+    .contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 16px 0 0;
+      font-size: 15px;
+    }
+
+    .contact-list li {
+      margin: 7px 0;
+    }
+
+    main section {
+      margin-bottom: 34px;
+    }
+
+    h1 {
+      font-size: 30px;
+      margin: 0 0 14px;
+      line-height: 1.25;
+    }
+
+    h2 {
+      font-size: 24px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 6px;
+      margin: 0 0 16px;
+    }
+
+    h3 {
+      font-size: 18px;
+      margin: 0 0 6px;
+      line-height: 1.35;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    .news-list {
+      padding-left: 20px;
+      margin-top: 0;
+    }
+
+    .news-list li {
+      margin-bottom: 8px;
+    }
+
+    .paper {
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr);
+      gap: 28px;
+      padding: 22px 0;
+      border-bottom: 1px solid #eeeeee;
+      align-items: start;
+    }
+
+    .paper-thumb {
+      width: 280px;
+      height: auto;
+      max-height: 170px;
+      border-radius: 4px;
+      border: 1px solid var(--line);
+      object-fit: contain;
+      display: block;
+      background: #ffffff;
+      padding: 0;
+    }
+
+    .paper:last-child {
+      border-bottom: none;
+    }
+
+    
+
+    .venue {
+      display: inline-block;
+      font-weight: 700;
+      color: #8a4b00;
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+
+    .authors {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 6px;
+    }
+
+    .paper-desc {
+      font-size: 15px;
+      margin-bottom: 6px;
+    }
+
+    .paper-links {
+      font-size: 15px;
+    }
+
+    .paper-links a {
+      margin-right: 10px;
+    }
+
+    .small-muted {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 16px;
+      margin-top: 18px;
+      align-items: center;
+    }
+
+    .social-icons a {
+      color: var(--link);
+      font-size: 26px;
+      text-decoration: none;
+    }
+
+    .social-icons a:hover {
+      color: #0f5fb5;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      margin-top: 36px;
+      padding-top: 16px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 780px) {
+      header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .layout {
+        grid-template-columns: 1fr;
+        gap: 26px;
+      }
+
+      aside {
+        position: static;
+      }
+
+      .profile-photo,
+      .photo-placeholder {
+        width: 180px;
+        height: 180px;
+      }
+
+      .paper {
+        grid-template-columns: 1fr;
+      }
+
+      .paper-thumb {
+        width: 100%;
+        height: 110px;
+      }
+
+      .education-list {
+        list-style-position: outside;
+        padding-left: 20px;
+        margin-top: 0;
+      }
+
+      .education-list li {
+        margin-bottom: 14px;
+      }
+
+      .edu-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        align-items: baseline;
+      }
+
+      .edu-info {
+        flex: 1;
+      }
+
+      .edu-date {
+        white-space: nowrap;
+        color: var(--muted);
+      }
+
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a class="site-title" href="#">Home</a>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#news">News</a>
+        <a href="#publications">Publications</a>
+        <a href="#education">Education</a>
+      </nav>
+    </header>
+
+    <div class="layout">
+      <aside>
+        <!-- Replace this placeholder with your real photo later:
+             <img class="profile-photo" src="images/profile.jpg" alt="Jiaqian Li" />
+        -->
+        <img class="profile-photo" src="images/profile.jpg" alt="Jiaqian Li" />
+
+        <h1 class="name">Jiaqian Li</h1>
+        <p class="role">M.S. Student in Computer Science<br />Brown University</p>
+        <p class="small-muted">Providence, RI, USA</p>
+
+        <div class="social-icons">
+          <a href="mailto:jiaqian_li@brown.edu" aria-label="Email" title="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+
+          <a href="https://scholar.google.com/citations?user=VeYfUsAAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar">
+            <i class="ai ai-google-scholar"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/in/jiaqian-li-009475220/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </div>
+      </aside>
+
+      <main>
+        <section id="about">
+          <h2>About Me</h2>
+          <p>
+            I am a first-year M.S. student in Computer Science at <a href="https://www.brown.edu/" target="_blank" rel="noopener">Brown University</a>, working on Natural Language Processing (NLP) and Large Language Models (LLMs). My research interests lie in <strong>LLM post-training</strong> and <strong>interpretability</strong>, with a focus on understanding, adapting, and controlling the internal mechanisms that shape large language model behavior after pretraining.
+          </p>
+
+          <p>
+            I am particularly interested in how internal representations, contextual information, and intermediate reasoning processes give rise to model behavior, and how these insights can inform post-training and inference-time control. This includes activation steering, retrieval-augmented generation (RAG) and reinforcement learning methods for improving the generalization, reliability, and safety of LLMs.
+          </p>
+
+          <p>
+            I work closely with Prof. <a href="https://khhuang.me/" target="_blank" rel="noopener">Kuan-Hao Huang</a> from Texas A&amp;M University, and I will join <a href="https://nlp.ucla.edu/" target="_blank" rel="noopener">UCLA NLP</a> as a summer research intern in June 2026. Previously, I received my Bachelor's degree in Computer Engineering with First Class Honors from <a href="https://www.ntu.edu.sg/" target="_blank" rel="noopener">Nanyang Technological University</a>, where I was fortunate to be advised by Prof. <a href="https://personal.ntu.edu.sg/wangwy/" target="_blank" rel="noopener">Wenya Wang</a> working on in-context learning (ICL). <strong>I am broadly open to collaborations on understanding and improving large language models, as well as other exciting problems in NLP and AI.</strong>
+          </p>
+        </section>
+
+        <section id="news">
+          <h2>News</h2>
+          <ul class="news-list">
+            <li><strong>2026.04</strong>: One paper is accepted to ICML 2026. See you in Seoul!</li>
+            <li><strong>2025.08</strong>: One paper is accepted to EMNLP 2025.</li>
+            <li><strong>2025.08</strong>: I join Brown University as a Master's student in Computer Science.</li>
+          </ul>
+        </section>
+
+        <section id="publications">
+          <h2>Publications</h2>
+
+          <article class="paper">
+            <img class="paper-thumb" src="images/icr.png"/>
+            <div>
+              <span class="venue">ICML 2026</span>
+              <h3>Towards Generalizable Implicit In-Context Learning with Attention Routing</h3>
+              <div class="authors"><strong>Jiaqian Li</strong>, Yanshu Li, Ligong Han, Ruixiang Tang, Wenya Wang</div>
+              <p class="paper-desc">
+                We propose In-Context Routing, an implicit in-context learning method that captures reusable ICL routing structure and modulates attention logits to simulate few-shot behavior without explicit demonstrations at inference time.
+              </p>
+              <div class="paper-links">
+                <a href="https://arxiv.org/abs/2509.22854" target="_blank" rel="noopener">arXiv</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="paper">
+            <img class="paper-thumb" src="images/stare.png"/>
+            <div>
+              <span class="venue">EMNLP 2025</span>
+              <h3>STARE at the Structure: Steering ICL Exemplar Selection with Structural Alignment</h3>
+              <div class="authors"><strong>Jiaqian Li</strong>, Qisheng Hu, Jing Li, Wenya Wang</div>
+              <p class="paper-desc">
+                We study structure-aware exemplar selection for in-context learning in complex semantic parsing tasks, and introduce a structural alignment perspective for selecting more effective demonstrations.
+              </p>
+              <div class="paper-links">
+                <a href="https://arxiv.org/abs/2508.20944" target="_blank" rel="noopener">arXiv</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="paper">
+            <img class="paper-thumb" src="images/svf.png"/>
+
+            <div>
+              <span class="venue">Under Review</span>
+              <h3>Steering Vector Fields for Context-Aware Inference-Time Control in Large Language Models</h3>
+              <div class="authors"><strong>Jiaqian Li</strong>, Yanshu Li, Kuan-Hao Huang</div>
+              <p class="paper-desc">
+                We introduce Steering Vector Fields, a context-aware framework for inference-time control that adapts steering directions according to local representation geometry.
+              </p>
+              <div class="paper-links">
+                <a href="https://arxiv.org/abs/2602.01654" target="_blank" rel="noopener">arXiv</a>
+              </div>
+            </div>
+          </article>
+
+        <section id="education">
+          <h2>Education</h2>
+          <ul class="education-list">
+            <li>
+              <div class="edu-row">
+                <div class="edu-info">
+                  <strong>Brown University</strong>, Providence, RI, USA<br />
+                  M.S. in Computer Science
+                </div>
+                <div class="edu-date">2025.8–2027.6 (Expected)</div>
+              </div>
+            </li>
+
+            <li>
+              <div class="edu-row">
+                <div class="edu-info">
+                  <strong>Nanyang Technological University</strong>, Singapore<br />
+                  B.Eng. in Computer Engineering, First Class Honors
+                </div>
+                <div class="edu-date">2021.8–2025.6</div>
+              </div>
+            </li>
+          </ul>
+        </section>
+        
+      </main>
+    </div>
+
+    <footer>
+      © 2026 Jiaqian Li. Last updated May 2026.
+    </footer>
+  </div>
+</body>
+</html>
